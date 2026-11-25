@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'paths' => ['api/*'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
     'allowed_methods' => ['*'],
-    'allowed_origins' => [env('FRONTEND_URL')],
-    'allowed_headers' => ['content-type', 'Authorization' , 'Accept'],
-
+    'allowed_origins' => ['*'], // Ganti menjadi bintang untuk development
+    'allowed_headers' => ['*'],
+    'supports_credentials' => true, // Wajib true agar cookie/token bisa lewat
 ];
